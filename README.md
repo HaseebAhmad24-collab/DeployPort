@@ -1,82 +1,102 @@
-# Portfolio Website
+# 🚢 DeployPort
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Jenkins](https://img.shields.io/badge/jenkins-%23D24939.svg?style=for-the-badge&logo=jenkins&logoColor=white)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
+[![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)](#)
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](#)
+[![Jenkins](https://img.shields.io/badge/jenkins-%23D24939.svg?style=for-the-badge&logo=jenkins&logoColor=white)](#)
 
-A high-performance, containerized personal portfolio website. This project showcases a professional profile using a streamlined tech stack optimized for speed, portability, and automated deployment.
+**DeployPort** is a streamlined, production-ready containerized deployment template for personal portfolios and static websites. By combining the performance of Nginx with the portability of Docker and the automation of Jenkins, this project provides a "DevOps-first" foundation for showcasing professional work.
 
-## 🚀 Overview
-
-This repository contains the source code for a responsive portfolio site. Unlike traditional static hosting, this project is built with a **DevOps-first approach**, utilizing Docker for environment parity and Jenkins for continuous integration and delivery (CI/CD).
+---
 
 ## ✨ Features
 
-- **Lightweight Core:** Built with clean, semantic HTML5.
-- **Containerized Architecture:** Powered by Nginx on Alpine Linux for an ultra-small footprint.
-- **CI/CD Ready:** Includes a `Jenkinsfile` for automated build and deployment pipelines.
-- **Production-Grade Web Server:** Uses Nginx to serve content efficiently.
-- **Responsive Design:** Optimized for viewing across all device types.
+-   **⚡ Ultra-Lightweight:** Built on Nginx Alpine, ensuring a minimal resource footprint and fast container startup times.
+-   **🐳 Containerized Workflow:** Complete environment parity from development to production using Docker.
+-   **🔄 Automated CI/CD:** Pre-configured `Jenkinsfile` to automate the build and deployment lifecycle.
+-   **🌐 Production Grade:** Optimized Nginx configuration for serving static assets efficiently.
+-   **📱 Fully Responsive:** The core HTML structure is designed to be accessible across all device types.
 
-## 🛠️ Installation & Setup
+---
 
-You can run this portfolio locally either by opening the files directly or using Docker for a production-like environment.
+## 🛠️ Tech Stack
 
-### Option 1: Using Docker (Recommended)
+-   **Frontend:** HTML5
+-   **Web Server:** Nginx (Alpine Linux)
+-   **Orchestration:** Docker
+-   **Automation:** Jenkins Pipeline (Groovy)
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/HaseebAhmad24-collab/portfolio.git
-   cd portfolio
-   ```
+---
 
-2. **Build the Docker image:**
-   ```bash
-   docker build -t my-portfolio .
-   ```
+## 🚀 Getting Started
 
-3. **Run the container:**
-   ```bash
-   docker run -d -p 8080:80 --name portfolio-site my-portfolio
-   ```
+### Prerequisites
 
-4. **Access the site:**
-   Open your browser and navigate to `http://localhost:8080`.
+-   [Docker](https://www.docker.com/get-started) installed on your local machine.
+-   [Git](https://git-scm.com/) for version control.
 
-### Option 2: Manual Execution
+### Installation & Local Setup
 
-Simply open the `index.html` file in any modern web browser.
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/HaseebAhmad24-collab/DeployPort.git
+    cd DeployPort
+    ```
 
-## 🔄 CI/CD Pipeline
+2.  **Build the Docker Image**
+    ```bash
+    docker build -t deployport-site .
+    ```
 
-The project includes a `Jenkinsfile` which automates the following workflow:
-1. **Source:** Pulls the latest code from the repository.
-2. **Build:** Creates a Docker image based on the provided `Dockerfile`.
-3. **Deploy:** (Configurable) Pushes the image to a registry or deploys to a web server.
+3.  **Run the Container**
+    ```bash
+    docker run -d -p 8080:80 --name my-portfolio deployport-site
+    ```
+
+4.  **Verify Deployment**
+    Navigate to `http://localhost:8080` in your preferred web browser.
+
+---
+
+## 🏗️ CI/CD Pipeline
+
+This project includes a `Jenkinsfile` designed to handle the continuous integration process. The pipeline typically follows these stages:
+
+1.  **Checkout:** Pulls the latest source code from the main branch.
+2.  **Build:** Packages the HTML assets into a new Docker image.
+3.  **Test:** (Optional) Validates the Nginx configuration.
+4.  **Deploy:** Pushes the finalized image to your container registry or updates the running service.
+
+---
 
 ## 📂 Project Structure
 
 ```text
-.
-├── Dockerfile          # Multi-stage build configuration
-├── Jenkinsfile         # CI/CD pipeline definition
-└── index.html          # Main portfolio entry point
+DeployPort/
+├── Dockerfile          # Nginx Alpine container configuration
+├── Jenkinsfile         # CI/CD pipeline automation script
+├── README.md           # Project documentation
+└── index.html          # Main website entry point
 ```
+
+---
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you'd like to improve the design or add features:
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the Branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
 
 ## ⚖️ License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
+
 **Maintained by [Haseeb Ahmad](https://github.com/HaseebAhmad24-collab)**
